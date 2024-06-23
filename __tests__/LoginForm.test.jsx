@@ -1,22 +1,38 @@
-import { UserList } from '@/components/UserList';
-import { render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { LoginForm } from '../src/components/LoginForm';
+import userEvent from '@testing-library/user-event';
 import { server } from '../mocks/server';
 import { rest } from 'msw';
 
-describe('UserList - Rendering', () => {
-  it('should have the text jared', async () => {
-    render(<UserList />);
-    expect(await screen.findByText('jared')).toBeInTheDocument();
-    expect(screen.queryByText('No Users')).not.toBeInTheDocument();
+describe('LoginForm', () => {
+  it('should enter username and password and click on login button', async () => {
+    render(<LoginForm />);
+    const loginButton = screen.getByRole('button', { name: 'Login' });
+    expect(loginButton).toBeDisabled();
+    await userEvent.type(screen.getByLabelText(/Username/), 'jared');
+    await userEvent.type(screen.getByLabelText(/Password/), 'password');
+    expect(loginButton).toBeEnabled();
+    fireEvent.click(loginButton);
+    await waitFor(() => {
+      expect(screen.getByText('Success Logging In')).toBeInTheDocument();
+    });
   });
 
-  it('should have username steve rendered', async () => {
+  it('should login user and display error message', async () => {
     server.use(
-      rest.get('/api/users', (req, res, ctx) => {
-        return res(ctx.json([{ id: 2, username: 'steve' }]));
+      rest.post('/api/auth', (req, res, ctx) => {
+        return res(ctx.status(400));
       })
     );
-    render(<UserList />);
-    expect(await screen.findByText('steve')).toBeInTheDocument();
+    render(<LoginForm />);
+    const loginButton = screen.getByRole('button', { name: 'Login' });
+    expect(loginButton).toBeDisabled();
+    await userEvent.type(screen.getByLabelText(/Username/), 'jared');
+    await userEvent.type(screen.getByLabelText(/Password/), 'password');
+    expect(loginButton).toBeEnabled();
+    fireEvent.click(loginButton);
+    await waitFor(() => {
+      expect(screen.getByText('Error Logging In')).toBeInTheDocument();
+    });
   });
 });
