@@ -1,6 +1,6 @@
 # react-unit-tests-js
 
-This project demonstrates a simple sign-up and sign-in page with basic authentication functionality, along with Jest tests to ensure the component works as expected. The project includes React components and Jest tests to verify the sign-up, sign-in, and error handling features.
+This project demonstrates a home page, simple sign-up and sign-in page with basic authentication functionality, and Jest tests to ensure the components works as expected.
 
 ## Project Description
 
@@ -52,8 +52,10 @@ To run the tests, use the following command:
 ```bash
 npm test
 ```
+
 Jest will run the tests and display the results in your terminal. 
 
+<img src="https://github.com/jrh89/react-unit-tests-js/flying-colors.png" width="480" height="270" alt="Test Results">
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
