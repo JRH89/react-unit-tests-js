@@ -1,5 +1,5 @@
 import Home from '@/app/page';
-import { render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 describe('Home Page ', () => {
@@ -47,7 +47,7 @@ describe('Home Page ', () => {
       render(<Home />);
       expect(screen.queryByText('This is the text!')).not.toBeInTheDocument();
       const showTextButton = screen.getByRole('button', { name: 'Show Text' });
-      await userEvent.click(showTextButton);
+      fireEvent.click(showTextButton);
       expect(
         await screen.findByText('This is the text!', {}, { timeout: 5000 })
       ).toBeInTheDocument();
