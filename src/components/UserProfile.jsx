@@ -14,14 +14,20 @@ export const UserProfile = ({
       </span>
     </div>
     <div>
-      <span>Username: {username}</span>
+      <span
+      >Username: {username}
+      </span>
     </div>
     <div>
-      <span>Email: {email}</span>
+      <span>
+        Email: {email}
+      </span>
     </div>
     <div>
       Verified:
-      <span>{isEmailVerified ? 'Email Verified' : 'Email Not Verified'}</span>
+      <span>
+        {isEmailVerified ? 'Email Verified' : 'Email Not Verified'}
+      </span>
     </div>
   </div>
 );

@@ -22,10 +22,10 @@ describe('Home Page', () => {
       expect(screen.getByText('Home Page')).toBeInTheDocument();
     });
 
-    it('should have button with text Go to Sign Up / Sign In', () => {
+    it('should have button with text Sign Up / Sign In', () => {
       renderWithRouter(<Home />);
       expect(
-        screen.getByRole('button', { name: 'Go to Sign Up / Sign In' })
+        screen.getByRole('button', { name: 'Sign Up / Sign In' })
       ).toBeInTheDocument();
     });
   });
@@ -33,7 +33,7 @@ describe('Home Page', () => {
   describe('Behavior', () => {
     it('should redirect to Sign Up / Sign In page on button click', () => {
       const { router } = renderWithRouter(<Home />);
-      const button = screen.getByRole('button', { name: 'Go to Sign Up / Sign In' });
+      const button = screen.getByRole('button', { name: 'Sign Up / Sign In' });
       fireEvent.click(button);
       expect(router.push).toHaveBeenCalledWith(
         '/SignUpSignIn',

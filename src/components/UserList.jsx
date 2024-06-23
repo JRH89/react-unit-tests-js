@@ -13,13 +13,21 @@ export const UserList = () => {
     <div>
       {users.length > 0 ? (
         <div>
-          <h1>List Of Users</h1>
+          <h1>
+            List Of Users
+          </h1>
           {users.map((user) => (
-            <div key={user.id}>{user.username}</div>
+            <div
+              key={user.id}
+            >
+              {user.username}
+            </div>
           ))}
         </div>
       ) : (
-        <span>No Users</span>
+          <span>
+            No Users
+          </span>
       )}
     </div>
   );
