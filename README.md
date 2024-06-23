@@ -43,7 +43,7 @@ To start the development server and view the project in your browser:
 npm start
 ```
 
-Open your browser and navigate to http://localhost:3000 to see the sign-up/sign-in page in action.
+Open your browser and navigate to http://localhost:3000 to see the app in action.
 
 ## Running Tests
 
