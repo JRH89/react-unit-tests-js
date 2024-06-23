@@ -4,7 +4,7 @@ This project demonstrates a simple sign-up and sign-in page with basic authentic
 
 ## Project Description
 
-The SignUpSignInPage project is a basic React application that provides:
+The react-unit-tests-js project is a basic React application that provides:
 
 - A sign-up form for new users to register.
 - A sign-in form for registered users to log in.
