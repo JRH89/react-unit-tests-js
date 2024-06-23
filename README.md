@@ -1,6 +1,6 @@
 # react-unit-tests-js
 
-This project demonstrates a home page, simple sign-up and sign-in page with basic authentication functionality, and Jest tests to ensure the components works as expected.
+This project includes a home page, simple sign-up and sign-in page with basic authentication functionality, several other components, and Jest tests to ensure the components works as expected.
 
 ## Project Description
 
