@@ -6,7 +6,7 @@ export default function Home() {
   
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-5xl font-bold">
+      <h1 className="text-3xl font-bold">
         Home Page
       </h1>
       <button className="p-2 rounded bg-blue-500 text-white">Click Me</button>
@@ -26,7 +26,7 @@ export default function Home() {
         <input className="text-black p-2 rounded ml-2" placeholder="Search..."/>
       </div>
       <div>
-        <input className="text-black p-2 rounded ml-2" value="Hello World"/>
+        <input className="text-black p-2 rounded ml-2" readOnly value="Hello World"/>
       </div>
       <div className="flex flex-col">
        <button className="p-2 mb-4 rounded bg-green-500 text-white" onClick={() => (setShowText(!showText), 100)}>
