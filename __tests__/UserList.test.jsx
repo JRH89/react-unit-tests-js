@@ -17,6 +17,6 @@ describe('UserList - Rendering', () => {
       })
     );
     render(<UserList />);
-    expect(await screen.findByText('jogn')).toBeInTheDocument();
+    expect(await screen.findByText('steve')).toBeInTheDocument();
   });
 });
