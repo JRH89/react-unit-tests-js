@@ -1,6 +1,6 @@
 # react-unit-tests-js
 
-This project includes a home page, simple sign-up and sign-in page with basic authentication functionality, several other components, and Jest tests to ensure the components works as expected.
+This project includes a home page, simple sign-up and sign-in page with basic authentication functionality, several other components, and Jest tests to ensure the components work as expected.
 
 ## Project Description
 
@@ -55,7 +55,7 @@ npm test
 
 Jest will run the tests and display the results in your terminal. 
 
-<img src="https://github.com/jrh89/react-unit-tests-js/flying-colors.png" width="480" height="270" alt="Test Results">
+<img src="https://raw.githubusercontent.com/JRH89/react-unit-tests-js/de94d9a2b383ffa10ad0e2830ee77c71ede1d4f5/public/flying-colors.png" width="480" height="270" alt="Test Results">
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
